@@ -42,11 +42,11 @@ pipeline {
                 . venv/bin/activate
                 ${SONAR_SCANNER_HOME}/bin/sonar-scanner \
                     -Dproject.settings=sonar-project.properties \
-                    -Dsonar.organization=poolcamacho \
-                    -Dsonar.projectKey=python-ci-demo \
+                    -Dsonar.organization=poolcamacho-1 \
+                    -Dsonar.projectKey=poolcamacho_python-ci-demo \
                     -Dsonar.sources=src \
                     -Dsonar.host.url=https://sonarcloud.io \
-                    -Dsonar.login=${SONAR_TOKEN}
+                    -Dsonar.token=${SONAR_TOKEN}
                 '''
             }
         }
